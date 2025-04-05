@@ -1,74 +1,72 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>org.bitlet</groupId>
     <artifactId>weupnp</artifactId>
-    <packaging>bundle</packaging>
     <version>0.1.5-SNAPSHOT</version>
     <name>weupnp</name>
+    <description>Weupnp is a lightweight Java library implementing the UPnP protocol for handling port mappings.</description>
     <url>https://github.com/bitletorg/weupnp</url>
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
+    <packaging>jar</packaging>
+
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
                 <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <release>${maven.compiler.release}</release>
                 </configuration>
-                <version>3.1</version>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
-                <version>2.6</version>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
                 <configuration>
                     <archive>
                         <manifest>
                             <mainClass>org.bitlet.weupnp.Main</mainClass>
-                            <packageName>org.bitlet.weupnp</packageName>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
                         </manifest>
                     </archive>
                 </configuration>
-                <version>2.4</version>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
-                <version>2.5.4</version>
+                <version>5.1.8</version>
                 <extensions>true</extensions>
-                <configuration />
             </plugin>
         </plugins>
     </build>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-    <description>Weupnp is a lightweight Java library, released under the LGPL licence, designed to implement the UPnP protocol to handle port mappings on Gateway Devices.</description>
-    <scm>
-        <connection>scm:git:https://github.com/bitletorg/weupnp.git</connection>
-        <developerConnection>scm:git:https://github.com/bitletorg/weupnp.git</developerConnection>
-        <url>https://github.com/bitletorg/weupnp</url>
-    </scm>
+
     <licenses>
         <license>
             <name>GNU Lesser General Public License (LGPL)</name>
+            <url>https://www.gnu.org/licenses/lgpl-3.0.html</url>
         </license>
     </licenses>
+
     <developers>
         <developer>
             <id>ale.bahgat</id>
@@ -83,32 +81,4 @@
             <name>Cristopher Cyll</name>
         </developer>
     </developers>
-    <profiles>
-        <profile>
-            <id>release-sign-artifacts</id>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>

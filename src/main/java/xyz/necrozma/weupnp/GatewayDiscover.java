@@ -259,6 +259,28 @@ public class GatewayDiscover {
         return devices;
     }
 
+
+    public Map<InetAddress, GatewayDevice> discoverLocalIp(InetAddress localIp) throws IOException, SAXException, ParserConfigurationException {
+        for (String type : searchTypes) {
+            String searchMessage = "M-SEARCH * HTTP/1.1\r\n" +
+                    "HOST: " + IP + ":" + PORT + "\r\n" +
+                    "ST: " + type + "\r\n" +
+                    "MAN: \"ssdp:discover\"\r\n" +
+                    "MX: 2\r\n\r\n";
+
+            SendDiscoveryThread thread = new SendDiscoveryThread(localIp, searchMessage);
+            thread.start();
+            try {
+                thread.join();
+            } catch (InterruptedException ignored) {}
+
+            if (!devices.isEmpty())
+                break;
+        }
+
+        return devices;
+    }
+
     /**
      * Parses the reply from UPnP devices
      *

@@ -22,7 +22,7 @@
  * 
  */
 
-package org.bitlet.weupnp;
+package xyz.necrozma.weupnp;
 
 import java.util.Map;
 import org.xml.sax.Attributes;

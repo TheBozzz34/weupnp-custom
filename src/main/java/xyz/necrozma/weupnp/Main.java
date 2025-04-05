@@ -25,7 +25,7 @@
 /*
  * refer to miniupnpc-1.0-RC8
  */
-package org.bitlet.weupnp;
+package xyz.necrozma.weupnp;
 
 import java.net.InetAddress;
 import java.text.DateFormat;

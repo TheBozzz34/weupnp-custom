@@ -21,7 +21,7 @@
  * Daniele Castagna - daniele dot castagna at gmail dot com
  * 
  */
-package org.bitlet.weupnp;
+package xyz.necrozma.weupnp;
 
 /**
  * A <tt>PortMappingEntry</tt> is the class used to represent port mappings on

@@ -21,7 +21,7 @@
  * Daniele Castagna - daniele dot castagna at gmail dot com
  *
  */
-package org.bitlet.weupnp;
+package xyz.necrozma.weupnp;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -48,7 +48,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
 /**
- * Handles the discovery of GatewayDevices, via the {@link org.bitlet.weupnp.GatewayDiscover#discover()} method.
+ * Handles the discovery of GatewayDevices, via the {@link GatewayDiscover#discover()} method.
  */
 public class GatewayDiscover {
 

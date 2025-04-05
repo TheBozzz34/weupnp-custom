@@ -22,7 +22,7 @@
  * 
  */
 
-package org.bitlet.weupnp;
+package xyz.necrozma.weupnp;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;

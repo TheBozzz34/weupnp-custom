@@ -21,7 +21,7 @@
  * Daniele Castagna - daniele dot castagna at gmail dot com
  * 
  */
-package org.bitlet.weupnp;
+package xyz.necrozma.weupnp;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -124,7 +124,7 @@ public class GatewayDevice {
      *
      * @throws SAXException if an error occurs while parsing the request
      * @throws IOException  on communication errors
-     * @see org.bitlet.weupnp.GatewayDeviceHandler
+     * @see GatewayDeviceHandler
      */
     public void loadDescription() throws SAXException, IOException {
 

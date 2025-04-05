@@ -1,92 +1,84 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>org.bitlet</groupId>
-    <artifactId>weupnp</artifactId>
-    <version>0.1.5-SNAPSHOT</version>
-    <name>weupnp</name>
-    <description>Weupnp is a lightweight Java library implementing the UPnP protocol for handling port mappings.</description>
-    <url>https://github.com/bitletorg/weupnp</url>
-    <packaging>jar</packaging>
-
-    <properties>
-        <maven.compiler.release>17</maven.compiler.release>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
-    <distributionManagement>
-        <repository>
-            <id>releases</id>
-            <url>https://github.com/TheBozzz34/weupnp-custom/releases</url>
-        </repository>
-    </distributionManagement>
-
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
-                <configuration>
-                    <release>${maven.compiler.release}</release>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.3.1</version>
-                <configuration>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.3.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>org.bitlet.weupnp.Main</mainClass>
-                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <version>5.1.8</version>
-                <extensions>true</extensions>
-            </plugin>
-        </plugins>
-    </build>
-
-    <licenses>
-        <license>
-            <name>GNU Lesser General Public License (LGPL)</name>
-            <url>https://www.gnu.org/licenses/lgpl-3.0.html</url>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <id>ale.bahgat</id>
-            <name>Alessandro Bahgat Shehata</name>
-        </developer>
-        <developer>
-            <id>daniele.castagna</id>
-            <name>Daniele Castagna</name>
-        </developer>
-        <developer>
-            <id>christophercyll</id>
-            <name>Cristopher Cyll</name>
-        </developer>
-    </developers>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.bitlet</groupId>
+	<artifactId>weupnp-custom</artifactId>
+	<version>0.1.5-SNAPSHOT</version>
+	<name>weupnp</name>
+	<description>Weupnp is a lightweight Java library implementing the UPnP protocol for handling port mappings.</description>
+	<url>https://github.com/bitletorg/weupnp</url>
+	<packaging>jar</packaging>
+	<properties>
+		<maven.compiler.release>17</maven.compiler.release>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub TheBozzz34 Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/TheBozzz34/weupnp-custom</url>
+		</repository>
+	</distributionManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<release>${maven.compiler.release}</release>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.3.1</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.3.0</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>org.bitlet.weupnp.Main</mainClass>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>5.1.8</version>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License (LGPL)</name>
+			<url>https://www.gnu.org/licenses/lgpl-3.0.html</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>ale.bahgat</id>
+			<name>Alessandro Bahgat Shehata</name>
+		</developer>
+		<developer>
+			<id>daniele.castagna</id>
+			<name>Daniele Castagna</name>
+		</developer>
+		<developer>
+			<id>christophercyll</id>
+			<name>Cristopher Cyll</name>
+		</developer>
+	</developers>
 </project>
